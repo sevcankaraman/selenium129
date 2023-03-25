@@ -47,11 +47,12 @@ public class C01_ClassWork {
         Arrays.stream(aramaSonucu.get(0).getText().split(" ")).skip(2).limit(1).forEach(System.out::println);
 
 //        Çıkan ilk sonucun resmine tıklayın
-        List<WebElement> urunResimleri = driver.findElements(By.className("s-image"));
-        urunResimleri.get(0).click();
+        //List<WebElement> urunResimleri = driver.findElements(By.className("s-image"));
+        List<WebElement> urunResimleri = driver.findElements(By.xpath("//img[@data-image-latency='s-product-image']"));
+        urunResimleri.get(5).click();
 
 //        Sayfayı kapatın
-        driver.close();
+       // driver.close();
 
     }
 }

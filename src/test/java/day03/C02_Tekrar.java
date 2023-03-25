@@ -9,25 +9,20 @@ import org.openqa.selenium.chrome.ChromeOptions;
 
 import java.time.Duration;
 
-public class C02_Xpath {
+public class C02_Tekrar {
     public static void main(String[] args) {
-
         WebDriver driver = new ChromeDriver(new ChromeOptions().addArguments("--remote-allow-origins=*"));
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
 
-        //        https://www.amazon.com/ sayfasına gidin
         driver.get("https://www.amazon.com/");
 
-//        "city bike" araması yapın
-        WebElement aramaKutusu = driver.findElement(By.id("twotabsearchtextbox"));
-        aramaKutusu.sendKeys("city bike" + Keys.ENTER);
+        //bilgisayar arayalım
 
-//        "Under 200" olanı tıklayın
-      //  WebElement we1 = driver.findElement(By.xpath("//span[.='Under $200']"));//attribute ismi yoksa nokta koy
-        // we1.click();
+        WebElement bilgisayar=driver.findElement(By.id("twotabsearchtextbox"));
+        bilgisayar.sendKeys("bilgisayar"+ Keys.ENTER);
 
-    //   driver.close();
+
 
 
     }
